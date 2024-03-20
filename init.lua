@@ -16,3 +16,16 @@ require("lazy").setup(plugins, opts)
 
 vim.opt.number = true
 
+
+-- https://stackoverflow.com/a/77180744/1166518
+vim.api.nvim_create_autocmd({"BufWinLeave"}, {
+  pattern = {"*.*"},
+  desc = "save view (folds), when closing file",
+  command = "mkview",
+})
+vim.api.nvim_create_autocmd({"BufWinEnter"}, {
+  pattern = {"*.*"},
+  desc = "load view (folds), when opening file",
+  command = "silent! loadview"
+})
+
