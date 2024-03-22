@@ -11,10 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(plugins, opts)
+require("lazy").setup("plugins")
 
 
-vim.opt.number = true
 
 
 -- https://stackoverflow.com/a/77180744/1166518
@@ -29,3 +28,6 @@ vim.api.nvim_create_autocmd({"BufWinEnter"}, {
   command = "silent! loadview"
 })
 
+
+vim.cmd[[colorscheme tokyonight-day]]
+vim.opt.number = true
