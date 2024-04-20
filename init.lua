@@ -31,3 +31,7 @@ vim.api.nvim_create_autocmd({"BufWinEnter"}, {
 
 vim.cmd[[colorscheme tokyonight-day]]
 vim.opt.number = true
+
+
+-- avoids source code shift while waiting for LSP to be loaded
+vim.opt.signcolumn = "yes"
