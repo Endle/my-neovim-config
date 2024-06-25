@@ -30,4 +30,3 @@ vim.opt.signcolumn = "yes"
 vim.keymap.set('n', '<leader>t', ':TagbarToggle<CR>')
 
 
-require("lspconfig").clangd.setup {}
