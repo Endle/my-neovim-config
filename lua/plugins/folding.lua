@@ -6,4 +6,6 @@ local M = {
 	opts = {}, -- needed even when using default config
 }
 
+vim.opt.foldmethod="indent"
+
 return M
