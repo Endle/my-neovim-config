@@ -36,5 +36,5 @@ vim.opt.shiftwidth = 4
 vim.keymap.set('n', '<leader>t', ':TagbarToggle<CR>')
 
 
-require("cscope_maps").setup()
+-- require("cscope_maps").setup()
 
