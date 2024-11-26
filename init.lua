@@ -16,6 +16,7 @@ require("lazy").setup("plugins")
 
 
 require("vim_config.save_buffer")
+--require("vim_config.lsp")
 
 vim.cmd[[colorscheme tokyonight-day]]
 vim.opt.number = true
