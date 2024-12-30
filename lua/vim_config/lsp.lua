@@ -25,8 +25,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
+-- sudo apt install -y python3-venv required for ruff_lsp (python)
 require('mason').setup({})
 require('mason-lspconfig').setup({
+  ensure_installed = { "clangd", "rust_analyzer", "ruff_lsp" },
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
