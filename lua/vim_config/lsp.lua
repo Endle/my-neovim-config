@@ -32,5 +32,6 @@ require('mason-lspconfig').setup({
       require('lspconfig')[server_name].setup({})
     end,
   },
+  ensure_installed = { "rust_analyzer", "vtsls", "volar" },
 })
 
