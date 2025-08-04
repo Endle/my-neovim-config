@@ -1,7 +1,0 @@
-local M = {
-  "ntpeters/vim-better-whitespace",
-  opts = {
-  },
-}
-
-return M

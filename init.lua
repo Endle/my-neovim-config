@@ -1,24 +1,9 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup("plugins")
 
 
 
-require("vim_config.save_buffer")
-require("vim_config.lsp")
+--require("vim_config.save_buffer")
 
-vim.cmd[[colorscheme tokyonight-day]]
+--vim.cmd[[colorscheme tokyonight-day]]
 vim.opt.number = true
 
 
@@ -39,3 +24,9 @@ vim.keymap.set('n', '<leader>t', ':TagbarToggle<CR>')
 
 -- require("cscope_maps").setup()
 
+-- Make sure to setup `mapleader` and `maplocalleader` before
+-- loading lazy.nvim so that mappings are correct.
+-- This is also a good place to setup other settings (vim.opt)
+require("config.key_binding")
+require("config.lazy")
+require("config.lsp_config")
