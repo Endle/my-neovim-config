@@ -1,6 +1,7 @@
 local L = {
     "clangd",
-    "ruff"
+    "ruff",
+    "rust_analyzer",
 }
 
 require("mason").setup()
