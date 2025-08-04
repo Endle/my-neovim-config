@@ -1,10 +1,13 @@
+local L = {
+    "clangd",
+    "ruff"
+}
+
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "clangd" },
+    ensure_installed = L,
 })
-vim.lsp.enable({
-    "clangd"
-})
+vim.lsp.enable(L)
 
 
 vim.diagnostic.config({
