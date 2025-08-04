@@ -1,7 +1,6 @@
 
 
 
---require("vim_config.save_buffer")
 
 --vim.cmd[[colorscheme tokyonight-day]]
 vim.opt.number = true
@@ -22,11 +21,8 @@ vim.opt.shiftwidth = 4
 vim.keymap.set('n', '<leader>t', ':TagbarToggle<CR>')
 
 
--- require("cscope_maps").setup()
-
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-require("config.key_binding")
 require("config.lazy")
+
+require("config.save_buffer")
 require("config.lsp_config")
+
